@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="GuessGameApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GuessGameApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="1275.752">
+
+    <Grid x:Name="mainGrid" Background="#FF8F1212" UseLayoutRounding="True" AutomationProperties.PositionInSet="0" AutomationProperties.SizeOfSet="-1" AutomationProperties.Level="4" Margin="-160,0">
+        <TextBlock x:Name="txtWelcome" HorizontalAlignment="Center" Margin="5.585,75.267,0,0" TextWrapping="Wrap" Text="*** Welcome to Guess the Number! ***" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="24" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="432.559" d:LayoutRounding="Auto" Height="44.998">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="txtInstruction" HorizontalAlignment="Center" Margin="91.046,135.955,267.223,0" TextWrapping="Wrap" Text="In this game, you will guess a number between 1 and 20, inclusive. You have 5 attempts to make your guess. To begin, enter your name in the box below, then click the ready button:" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="1237.731" d:LayoutRounding="Auto" Height="44.998">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Center" Margin="682,222,747,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167" FontSize="18"/>
+        <TextBlock x:Name="txtName" HorizontalAlignment="Center" Margin="556.07,226.313,947.555,0" TextWrapping="Wrap" Text="Your name: " VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="92.375" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="btnReady" Content="I'm ready!" HorizontalAlignment="Left" Margin="895,222,0,0" VerticalAlignment="Top" Width="123" Background="#FFA09696" FontSize="18" Click="ReadyButtonActionPerformed"/>
+        <TextBox x:Name="tbxGuess" HorizontalAlignment="Center" Margin="682,374,747,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167" FontSize="18"/>
+        <TextBlock x:Name="txtGuess" HorizontalAlignment="Center" Margin="553.841,380.121,949.784,0" TextWrapping="Wrap" Text="Try a guess:" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="92.375" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="btnGuess" Content="Guess!" HorizontalAlignment="Left" Margin="895,374,0,0" VerticalAlignment="Top" Width="123" Background="#FFA09696" FontSize="18" Click="GuessButtonActionPerformed"/>
+        <TextBlock x:Name="txtGo" HorizontalAlignment="Center" Margin="1053.158,227.077,87.164,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="455.678" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="txtResult" HorizontalAlignment="Center" Margin="689.815,470.231,305.72,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.442,0.675" UseLayoutRounding="False" Width="600.465" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241" TranslateX="-0.021" TranslateY="-0.023"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="txtAttempts" HorizontalAlignment="Center" Margin="1055.389,378.075,361.283,0" TextWrapping="Wrap" Text="Attempts remaining:" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="179.328" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="txtRemaining" HorizontalAlignment="Center" Margin="1124.491,411.169,454.913,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="16.596" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="btnRestart" Content="Restart" HorizontalAlignment="Left" Margin="726,550,0,0" VerticalAlignment="Top" Width="190" Background="#FFA09696" FontSize="18" Click="RestartButtonActionPerformed"/>
+        <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="726,612,0,0" VerticalAlignment="Top" Width="190" Background="#FFA09696" FontSize="18" Click="ExitButtonActionPerformed"/>
+        <TextBlock x:Name="txtPlayer" HorizontalAlignment="Center" Margin="694.274,299.873,809.351,0" TextWrapping="Wrap" Text="Player:" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="92.375" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="txtPlayerName" HorizontalAlignment="Center" Margin="770.063,299.929,662.269,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFECDFDF" FontSize="18" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="163.668" d:LayoutRounding="Auto" Height="28.007">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.241"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+    </Grid>
+</Page>
